@@ -1,5 +1,5 @@
 # PN-DSQG: An Accelerated RL Scheduling Framework of RCMSs with PTPNs
-This repository provides an accelerated scheduling framework for **robotic cellular manufacturing systems (RCMSs)**, built upon **place-timed Petri nets (PTPNs)** and an improved **reinforcement learning** framework.
+##This repository provides an accelerated scheduling framework for **robotic cellular manufacturing systems (RCMSs)**, built upon **place-timed Petri nets (PTPNs)** and an improved **reinforcement learning** framework.
 
 Compared with traditional approaches, **PN-DSQG** significantly improves both learning speed and solution quality:<br>
 --**A star search algorithm with PTPNs**can find optimal solutions but requires carefully designed heuristics, leading to high computation cost and limited scalability;<br>

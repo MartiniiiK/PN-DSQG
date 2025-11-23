@@ -12,7 +12,7 @@ It begins by modeling the RCMSs using generalized PTPNs. Based on this model, we
 ## Program Demonstration
 The project is developed in C# using a platform equipped with a 10-core Intel(R) Xeon(R) E5-2673 v4 CPU and 30 GB of RAM.<br>
 
-## https://github.com/user-attachments/assets/cfa2386b-d0f9-4efa-8222-0c785c1f293e
+https://github.com/user-attachments/assets/cfa2386b-d0f9-4efa-8222-0c785c1f293e
 
 This demonstration is performed in Visual Studio Code. For a detailed explanation of the proposed algorithm, please refer to our paper.<br>
 First, make sure the .NET SDK is properly installed and verified on your test platform, since this project is written in C#. Once the environment is ready, you can compile and run the program.<br>

@@ -19,7 +19,7 @@ First, make sure the .NET SDK is properly installed and verified on your test pl
 
 The project consists of the following components:<br>
 --**Main.cs** — The main entry file, where the user parameters are configured.<br>
---**PNQL.cs** — The reinforcement learning module, including the environment setup and agent logic.<br>
+--**PNDSQG.cs** — The reinforcement learning module, including the environment setup and agent logic.<br>
 --**PNfiles folder** — This folder stores the input files. <br>
   For each PTPN model, two files are required: <br>
   - `xxx_matrix.txt`: contains the transpose of the incidence matrix, where rows represent transitions and columns represent places. <br>

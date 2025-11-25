@@ -1,22 +1,26 @@
 # PN-DSQG: An Accelerated RL Scheduling Framework of RCMSs with PTPNs
-## This repository provides an accelerated scheduling framework for **robotic cellular manufacturing systems (RCMSs)**, built upon **place-timed Petri nets (PTPNs)** and an improved **reinforcement learning** framework.
+## Introduction
+This repository provides an accelerated scheduling framework for **robotic cellular manufacturing systems (RCMSs)**, built upon **place-timed Petri nets (PTPNs)** and an improved **reinforcement learning** framework.
 
 Compared with traditional approaches, **PN-DSQG** significantly improves both learning speed and solution quality:<br>
 --**A star search algorithm with PTPNs**can find optimal solutions but requires carefully designed heuristics, leading to high computation cost and limited scalability;<br>
 --**Dispatching-rule-based algorithms (e.g., FIFO, SRPT)**are fast but often produce unfavorable schedules.<br>
 --**Conventional PN-based RL methods**prove to be a desirable self-optimized technique but suffer from slow convergence and suboptimal performance for real-world RCMS scheduling.<br>
 
-To address these issues, we propose PN-DSQG.
-It begins by modeling the RCMSs using generalized PTPNs. Based on this model, we incorporate **double speedy Q-learning** with PTPN reinforcement learning environment, which introduces a momentum term into the Bellman operator for faster convergence. Furthermore, a **gradient-adaptive successive over-relaxation (GSOR)** mechanism operates under a two-timescale learning framework. GSOR parameters are optimized on a slow timescale using a one-simulation simultaneous perturbation stochastic approximation technique, driven by temporal-difference error. Meanwhile, Q-values are updated iteratively on a fast timescale, ensuring stability and creating a synergistic acceleration effect. Most importantly, PN-DSQG accelerates learning without sacrificing solution quality, making it suitable for practical RCMS scheduling scenarios.
+To address these issues, we propose PN-DSQG. It begins by modeling the RCMSs using generalized PTPNs. Based on this model, we incorporate **double speedy Q-learning** with PTPN reinforcement learning environment, which introduces a momentum term into the Bellman operator for faster convergence. Furthermore, a **gradient-adaptive successive over-relaxation (GSOR)** mechanism operates under a two-timescale learning framework. GSOR parameters are optimized on a slow timescale using a one-simulation simultaneous perturbation stochastic approximation technique, driven by temporal-difference error. Meanwhile, Q-values are updated iteratively on a fast timescale, ensuring stability and creating a synergistic acceleration effect. Most importantly, PN-DSQG accelerates learning without sacrificing solution quality, making it suitable for practical RCMS scheduling scenarios.
+
+## PN-DSQG Workflow
+The application of PN-DSQG is structured into three distinct phases, corresponding to subgraphs A), B), and C) in the picture below. The detailed roles of these phases are outlined as follows: A) Modeling Phase: A PN model is first constructed from a physical RCMS via a bottom-up synthesis method. B) Learning Phase: The resulting PN model serves as the environment for the proposed algorithm to learn an optimal policy offline, yielding optimized Q-tables. C) Application Phase: Upon receiving a production plan, the system utilizes the pre-trained Q-tables to make real-time, online scheduling decisions.
+![PN-DSQG Workflow](https://github.com/MartiniiiK/PN-DSQG/blob/main/image/D4QN_PN_DGS.png?raw=true)
 
 ## Program Demonstration
 The project is developed in C# using a platform equipped with a 10-core Intel(R) Xeon(R) E5-2673 v4 CPU and 30 GB of RAM.<br>
+This demonstration is performed in Visual Studio Code. For a detailed explanation of the proposed algorithm, please refer to our paper.<br>
 
 https://github.com/user-attachments/assets/cfa2386b-d0f9-4efa-8222-0c785c1f293e
 
-This demonstration is performed in Visual Studio Code. For a detailed explanation of the proposed algorithm, please refer to our paper.<br>
+## Getting Started
 First, make sure the .NET SDK is properly installed and verified on your test platform, since this project is written in C#. Once the environment is ready, you can compile and run the program.<br>
-
 The project consists of the following components:<br>
 --**Main.cs** — The main entry file, where the user parameters are configured.<br>
 --**PNDSQG.cs** — The reinforcement learning module, including the environment setup and agent logic.<br>
@@ -29,4 +33,5 @@ There are two main types of output files:<br>
 --**Total_Makespan_algorithmname_PTPNname_Lotsize.csv** — These record the schedule quality found during inference after each training session, measured by the minimum makespan.<br>
 --**training_process_xx.csv** — The number at the end indicates a snapshot taken every 100 training episodes. These files record metrics such as cumulative average rewards and deadlock occurrences.<br>
 
+## Contact
 For any inquiries or issues, please reach out to us at [kylemartiniii@njust.edu.cn](mailto:kylemartiniii@njust.edu.cn).

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Kyle.RLPetri.Test
+namespace Nobody.RLPetri.Test
 {
     class MainClass
     {
@@ -33,9 +33,9 @@ namespace Kyle.RLPetri.Test
             decimal omega_learning_rate = 0.05M;
             decimal omega_perturb_magnitude = 0.03M;
 
-            qL = new Kyle.RLPetri.PNQL(initialMFile[0], incidenceMatrixFile[0]);
-            goalNode = new Kyle.RLPetri.PNQLNode(null, null, PNQL.GoalM, PNQL.GoalR, 0, -1, 0, 0);
-            startNode = new Kyle.RLPetri.PNQLNode(null, goalNode, PNQL.StartM, PNQL.StartR, 0, 0, 0, 0);
+            qL = new Nobody.RLPetri.PNQL(initialMFile[0], incidenceMatrixFile[0]);
+            goalNode = new Nobody.RLPetri.PNQLNode(null, null, PNQL.GoalM, PNQL.GoalR, 0, -1, 0, 0);
+            startNode = new Nobody.RLPetri.PNQLNode(null, goalNode, PNQL.StartM, PNQL.StartR, 0, 0, 0, 0);
             string algorithmName = use_gsor ? "PNDSQG" : "PNDSQ";
             string makespanLogFile = $"Total_Makespan_{algorithmName}_{fileName}.csv";
             Console.WriteLine();
@@ -43,7 +43,7 @@ namespace Kyle.RLPetri.Test
             {
                 for (int i = 1; i <= 1; i++)
                 {
-                    Console.WriteLine($"\n--- 正在进行第 {i} 次训练与执行 ---");
+                    Console.WriteLine($"\n---  {ith} training and infering ---");
                     DateTime startTime1 = DateTime.Now;
                     qL.Train_DSGSOR(startNode, goalNode, fileName, Epi, discountrate, PeReward, i,omega_static, use_gsor, omega_learning_rate, omega_perturb_magnitude);
                     DateTime endTime1 = DateTime.Now;

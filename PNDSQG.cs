@@ -4,9 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Kyle.RLPetri
+namespace Nobody.RLPetri
 {
-    public class PNQLNode//A state node in the reachability graph of a Petri net
+    public class PNQLNode
     {
         #region Properties
         public PNQLNode Parent { get; set; }

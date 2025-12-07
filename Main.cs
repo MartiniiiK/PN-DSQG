@@ -16,12 +16,7 @@ namespace Kyle.RLPetri.Test
             Kyle.RLPetri.PNQLNode goalNode;
             Kyle.RLPetri.PNQLNode startNode;
 
-            string fileName = "ChenFig5_55";
-            // string fileName = "ChenFig6_222";
-            // string fileName = "xiong98_3333";
-            // string fileName = "Huang2012Fig1Revised_2222";
-            // string fileName = "Chen2011Big_11112";
-            // string fileName = "new4x3_1111";
+            string fileName = "Example1_11";
 
             string[] initialMFile = new string[] { "PNfiles/" + fileName + "_init.txt" };
             string[] incidenceMatrixFile = new string[] { "PNfiles/" + fileName + "_matrix.txt" };

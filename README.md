@@ -16,7 +16,7 @@ The application of PN-DSQG is structured into three distinct phases, correspondi
 ## Program Demonstration
 The project is developed in C# using a platform equipped with a 10-core Intel(R) Xeon(R) E5-2673 v4 CPU and 30 GB of RAM.<br>
 This demonstration is performed in Visual Studio Code. For a detailed explanation of the proposed algorithm, please refer to the paper.<br>
-Due to the requirements of the paper review process, we are currently unable to provide an operation tutorial video for the project. If needed, feel free to leave a message, and we can provide it later.
+**Due to the requirements of the paper review process, we are currently unable to provide an operation tutorial video for the project. If needed, feel free to leave a message, and we can provide it later.**
 
 ## Getting Started
 First, make sure the .NET SDK is properly installed and verified on your test platform, since this project is written in C#. Once the environment is ready, you can compile and run the program.<br>
@@ -33,4 +33,4 @@ There are two main types of output files:<br>
 --**training_process_xx.csv** — The number at the end indicates a snapshot taken every 100 training episodes. These files record metrics such as cumulative average rewards and deadlock occurrences.<br>
 
 ## Contact
-The contact link cannot be provided at this moment.
+**The contact link cannot be provided at this moment.**

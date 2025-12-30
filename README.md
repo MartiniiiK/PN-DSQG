@@ -12,11 +12,14 @@ To address these issues, we propose PN-DSQG. It begins by modeling the RCMSs usi
 ## PN-DSQG Workflow
 The application of PN-DSQG is structured into three distinct phases, corresponding to subgraphs A), B), and C) in the picture below. The detailed roles of these phases are outlined as follows: A) Modeling Phase: A PN model is first constructed from a physical RCMS via a bottom-up synthesis method. B) Learning Phase: The resulting PN model serves as the environment for the proposed algorithm to learn an optimal policy offline, yielding optimized Q-tables. C) Application Phase: Upon receiving a production plan, the system utilizes the pre-trained Q-tables to make real-time, online scheduling decisions.
 
+![PN-DSQG Workflow](https://github.com/user-attachments/assets/09001ac6-44d8-42fe-ac22-07623661991a)
+<img width="5623" height="3101" alt="PNDSGQ" src="https://github.com/user-attachments/assets/09001ac6-44d8-42fe-ac22-07623661991a" />
+
 
 ## Program Demonstration
 The project is developed in C# using a platform equipped with a 10-core Intel(R) Xeon(R) E5-2673 v4 CPU and 30 GB of RAM.<br>
 This demonstration is performed in Visual Studio Code. For a detailed explanation of the proposed algorithm, please refer to the paper.<br>
-**Due to the requirements of the paper review process, we are currently unable to provide an operation tutorial video for the project.**
+**Due to the requirements of the paper review process, we are currently unable to provide an operation tutorial video for the project. It will be provided at an appropriate time. Please stay tuned.**
 
 ## Getting Started
 First, make sure the .NET SDK is properly installed and verified on your test platform, since this project is written in C#. Once the environment is ready, you can compile and run the program.<br>
